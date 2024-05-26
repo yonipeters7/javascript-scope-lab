@@ -56,7 +56,7 @@ describe('index.js', function() {
 
   describe('if statement', function() {
     it('has a condition with the value of true', function() {
-      expect(js).to.match(/if\(true\)/, "Expected the use of an if statement whose condition has the value of true")
+      expect(js).to.match(/if\(true\)/, "Expected the use of an if statement whose condition has the value of true");
     });
 
     it("creates a block-scoped variable named anotherNewBurger using the const keyword and assign it the value 'Maple Bacon Burger'", function() {
@@ -66,6 +66,18 @@ describe('index.js', function() {
     it("uses the .push() array method to add anotherNewBurger, which has the value of 'Maple Bacon Burger', to the burgers array", function() {
       expect(burgers.includes('Maple Bacon Burger')).to.equal(true, "Expected the burgers array to have the string 'Maple Bacon Burger' as one of its elements");
       expect(js).to.match(/if\(true\)[ \n]*\{(.|\n)*.push\((.|\n)+\)(.|\n)*\}/, "Expected the use of the .push() array method, inside of the if statement, to add anotherNewBurger, which has the value of 'Maple Bacon Burger', to the burgers array");
+    });
+  });
+
+  describe('changeFeaturedDrink', function() {
+    it('is a function', function() {
+      expect(typeof changeFeaturedDrink).to.equal('function', 'Expected the data type of changeFeaturedDrink to be a function');
+    });
+
+    it("when called, changes the value of the featuredDrink variable to 'The JavaShake'", function() {
+      expect(window.featuredDrink).to.equal('Strawberry Milkshake', "Expected the featuredDrink variable to have the value 'Strawberry Milkshake' before the changeFeaturedDrink function is called");
+      changeFeaturedDrink();
+      expect(window.featuredDrink).to.equal('The JavaShake', "Expected the featuredDrink variable to have the value 'The JavaShake' after the changeFeaturedDrink function is called");
     });
   });
 });
