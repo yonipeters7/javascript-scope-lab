@@ -1,11 +1,11 @@
 {
-  "name": "js-principles-scope-lab",
+  "name": "javascript-scope-lab",
   "version": "0.1.0",
-  "description": "JavaScript Principles Scope Lab for Learn.co",
+  "description": "JavaScript Scope Lab for Learn.co",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/learn-co-curriculum/js-principles-scope-lab.git"
+    "url": "git+ssh://git@github.com/RikkuX491/javascript-scope-lab.git"
   },
   "scripts": {
     "test": "mocha --timeout 5000 -R mocha-multi --reporter-options spec=-,json=.results.json"
@@ -20,9 +20,9 @@
   "author": "Flatiron School",
   "license": "SEE LICENSE IN LICENSE.md",
   "bugs": {
-    "url": "https://github.com/learn-co-curriculum/js-principles-scope-lab/issues"
+    "url": "https://github.com/RikkuX491/javascript-scope-lab/issues"
   },
-  "homepage": "https://github.com/learn-co-curriculum/js-principles-scope-lab#readme",
+  "homepage": "https://github.com/RikkuX491/javascript-scope-lab#readme",
   "devDependencies": {
     "babel-core": "6.26.3",
     "babel-preset-env": "1.7.0",
