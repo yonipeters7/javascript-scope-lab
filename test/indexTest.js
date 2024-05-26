@@ -64,6 +64,7 @@ describe('index.js', function() {
 
     it("uses the .push() array method to add anotherNewBurger, which has the value of 'Maple Bacon Burger', to the burgers array", function() {
       expect(burgers.includes('Maple Bacon Burger')).to.equal(true, "Expected the burgers array to have the string 'Maple Bacon Burger' as one of its elements");
+      expect(js).to.match(/if\(true\)[ \n]*\{(.|\n)*.push\((.|\n)+\)(.|\n)*\}/, "Expected the use of the .push() array method, inside of the if statement, to add anotherNewBurger, which has the value of 'Maple Bacon Burger', to the burgers array");
     });
   });
 });
