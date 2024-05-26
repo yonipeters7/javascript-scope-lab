@@ -48,8 +48,9 @@ describe('index.js', function() {
     });
 
     it("when called, uses the .push() array method to add newBurger, which has the value of 'Flatburger', to the burgers array", function() {
+      expect(burgers.includes('Flatburger')).to.equal(false, "Expected the burgers array to not have the string 'Flatburger' as one of its elements before the addBurger function is called");
       addBurger();
-      expect(burgers.includes('Flatburger')).to.equal(true, "Expected the burgers array to have the string 'Flatburger' as one of its elements");
+      expect(burgers.includes('Flatburger')).to.equal(true, "Expected the burgers array to have the string 'Flatburger' as one of its elements after the addBurger function is called");
     });
   });
 
