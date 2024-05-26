@@ -21,4 +21,19 @@ describe('index.js', function() {
       expect(burgers.includes('Cheeseburger')).to.equal(true, "Expected the burgers array to have the string 'Cheeseburger' as one of its elements")
     });
   });
+
+  describe('featuredDrink', function() {
+    it('is declared using let', function() {
+      expect(featuredDrink);
+      expect(js).to.match(/let[ \n]+featuredDrink/, 'Expected featuredDrink to be declared using let');
+    });
+
+    it('is a string', function () {
+      expect(typeof featuredDrink).to.equal('string', 'Expected the data type of featuredDrink to be a string');
+    });
+
+    it("is set to the value 'Strawberry Milkshake'", function() {
+      expect(featuredDrink).to.equal('Strawberry Milkshake');
+    });
+  });
 });
