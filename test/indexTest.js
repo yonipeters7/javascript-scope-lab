@@ -44,12 +44,26 @@ describe('index.js', function() {
 
     it("when called, creates a function-scoped variable named newBurger using the const keyword and assigns it the value 'Flatburger'", function() {
       expect(js).to.match(/const[ \n]+newBurger[ \n]*=[ \n]*['"`]Flatburger['"`]/, "Expected newBurger to be declared using const and have the value 'Flatburger'");
-      expect(typeof newBurger).to.equal('undefined', 'Expected newBurger to be function-scoped, not globally accessible');
+      expect(typeof newBurger).to.equal('undefined', 'Expected newBurger to be function-scoped, declared inside of the addBurger function, not globally accessible');
     });
 
     it("when called, uses the .push() array method to add newBurger, which has the value of 'Flatburger', to the burgers array", function() {
       addBurger();
       expect(burgers.includes('Flatburger')).to.equal(true, "Expected the burgers array to have the string 'Flatburger' as one of its elements");
+    });
+  });
+
+  describe('if statement', function() {
+    it('has a condition with the value of true', function() {
+      expect(js).to.match(/if\(true\)/, "Expected the use of an if statement whose condition has the value of true")
+    });
+
+    it("creates a block-scoped variable named anotherNewBurger using the const keyword and assign it the value 'Maple Bacon Burger'", function() {
+      expect(js).to.match(/if\(true\)[ \n]*\{(.|\n)*const[ \n]+anotherNewBurger[ \n]*=[ \n]*['"`]Maple Bacon Burger['"`](.|\n)*\}/, "Expected anotherNewBurger to be a block-scoped variable that is declared inside of the if statement using const and has the value 'Maple Bacon Burger'");
+    });
+
+    it("uses the .push() array method to add anotherNewBurger, which has the value of 'Maple Bacon Burger', to the burgers array", function() {
+      expect(burgers.includes('Maple Bacon Burger')).to.equal(true, "Expected the burgers array to have the string 'Maple Bacon Burger' as one of its elements");
     });
   });
 });
