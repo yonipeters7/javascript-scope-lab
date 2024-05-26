@@ -59,7 +59,7 @@ describe('index.js', function() {
       expect(js).to.match(/if\(true\)/, "Expected the use of an if statement whose condition has the value of true");
     });
 
-    it("creates a block-scoped variable named anotherNewBurger using the const keyword and assign it the value 'Maple Bacon Burger'", function() {
+    it("creates a block-scoped variable named anotherNewBurger using the const keyword and assigns it the value 'Maple Bacon Burger'", function() {
       expect(js).to.match(/if\(true\)[ \n]*\{(.|\n)*const[ \n]+anotherNewBurger[ \n]*=[ \n]*['"`]Maple Bacon Burger['"`](.|\n)*\}/, "Expected anotherNewBurger to be a block-scoped variable that is declared inside of the if statement using const and has the value 'Maple Bacon Burger'");
     });
 
