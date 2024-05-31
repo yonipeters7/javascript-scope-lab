@@ -8,7 +8,7 @@ The Flatburger restaurant is beginning to create its menu of food and drinks to 
 
 ## Tools and Resources
 
-It is recommended that you use the Visual Studio Code (VSCode) IDE for this code-along, but you can feel free to use any IDE that you feel comfortable using.
+It is recommended that you use the Visual Studio Code (VSCode) IDE for this lab.
 
 Useful considerations and terminology:
 
