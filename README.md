@@ -48,5 +48,5 @@ These are your tasks:
 
 ## Submission and Grading Criteria
 
-When you're done, remember to commit and push your changes up to GitHub, then
+When you're done with this lab, remember to commit and push your changes up to GitHub, then
 submit your work to Canvas using CodeGrade.
