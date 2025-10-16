@@ -27,4 +27,7 @@ console.log('Menu Burgers:', burgers);
 console.log('Featured Drink:', featuredDrink);
 
 // Export for grading (optional)
-module.exports = { burgers, featuredDrink, addBurger };
+if (typeof module !== 'undefined') {
+  module.exports = { addBurger, changeFeaturedDrink };
+}
+
