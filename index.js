@@ -1,16 +1,16 @@
 // Global variables
-let burgers = ['Hamburger', 'Cheeseburger'];
-let featuredDrink = 'Strawberry Milkshake';
+const burgers = ['Hamburger', 'Cheeseburger']; // must use const
+let featuredDrink = 'Strawberry Milkshake'; // must use let
 
-// Function-scoped variable inside a function
+// Function-scoped variable using const
 function addBurger() {
-  let newBurger = 'Flatburger'; // function-scoped
+  const newBurger = 'Flatburger'; // function-scoped const
   burgers.push(newBurger);
 }
 
-// Block-scoped variable inside an always-true condition
+// Block-scoped variable using const
 if (true) {
-  let anotherNewBurger = 'Maple Bacon Burger'; // block-scoped
+  const anotherNewBurger = 'Maple Bacon Burger'; // block-scoped const
   burgers.push(anotherNewBurger);
 }
 
@@ -19,7 +19,7 @@ function changeFeaturedDrink() {
   featuredDrink = 'The JavaShake';
 }
 
-// Optional: verify locally
+// Optional: verify functionality
 console.log('Menu Burgers:', burgers);
 console.log('Featured Drink:', featuredDrink);
 
