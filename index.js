@@ -1,33 +1,29 @@
-// Write your solution in this file!
 // Global variables
 let burgers = ['Hamburger', 'Cheeseburger'];
 let featuredDrink = 'Strawberry Milkshake';
 
-// Function scope
+// Function-scoped variable inside a function
 function addBurger() {
-  let newBurger = 'Flatburger'; // function-scoped variable
+  let newBurger = 'Flatburger'; // function-scoped
   burgers.push(newBurger);
 }
 
-// Block scope
+// Block-scoped variable inside an always-true condition
 if (true) {
-  let anotherNewBurger = 'Maple Bacon Burger'; // block-scoped variable
+  let anotherNewBurger = 'Maple Bacon Burger'; // block-scoped
   burgers.push(anotherNewBurger);
-
-  // Nested function to update global variable
-  function changeFeaturedDrink() {
-    featuredDrink = 'The JavaShake';
-  }
-
-  changeFeaturedDrink(); // update the drink
 }
 
-// Optional logs to check functionality
+// Function that changes the global variable
+function changeFeaturedDrink() {
+  featuredDrink = 'The JavaShake';
+}
+
+// Optional: verify locally
 console.log('Menu Burgers:', burgers);
 console.log('Featured Drink:', featuredDrink);
 
-// Export for grading (optional)
+// Export for testing
 if (typeof module !== 'undefined') {
-  module.exports = { addBurger, changeFeaturedDrink };
+  module.exports = { burgers, featuredDrink, addBurger, changeFeaturedDrink };
 }
-
